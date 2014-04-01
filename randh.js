@@ -51,18 +51,31 @@ $( document ).ready(function() {
         var randQuestion = getrand(questionList.slice(start-1, end));
         var randAns = answerList[start-1+randQuestion.index];
 
-        question.html('');
         question.html(randQuestion.item);
 
         answer.css("visibility", "hidden");
-        answer.html('');
         answer.html(randAns);
 
         var seconds = Number($('#timerSeconds').val());
-        if (answerTimer != null) {clearTimeout(answerTimer);}
-        answerTimer = setTimeout(showAnswer, seconds * 1000);
+        if (seconds > 0) {
+            if (answerTimer != null) {clearTimeout(answerTimer);}
+            answerTimer = setTimeout(showAnswer, seconds * 1000);
+        } else {
+            answer.css("visibility", "visible");
+        }
     };
     $('#kanjiSelect').click(updateQuestion);
     $('#keywordSelect').click(updateQuestion);
 
+    var updateRange = function (obj) {
+        var numJoyo = 2200;
+        var endIdx = $("#endIdx");
+        if (0 == obj.currentTarget.id.localeCompare("fullRange")) {
+            endIdx.val(kw.length);
+        } else {
+            endIdx.val(numJoyo);
+        }
+    };
+    $('#fullRange').click(updateRange);
+    $('#joyoRange').click(updateRange);
 });

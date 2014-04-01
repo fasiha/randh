@@ -8,20 +8,45 @@
 <meta charset="UTF-8">
 </head>
 <div id="input">
+
 Between Heisig numbers 
 <input type="text" size="4" id="startIdx" value="1"> and 
-<input type="text" size="4" id="endIdx" value="2200">, give me a random <span id="kanjiSelect">kanji</span> or <span id="keywordSelect">keyword</span>. (Show answer <span id="showAnswer">now?</span> or in <input type="text" size="4" id="timerSeconds" value="8">seconds).
+<input type="text" size="4" id="endIdx" value="3029">.
+
+<br>
+Show answer in <input type="text" size="1" id="timerSeconds" value="5"> seconds or <button class="smallButton" id="showAnswer">now</button>.
+
+<br>
+<button class="button" id="kanjiSelect">Random kanji</button>
+ | 
+ <button class="button" id="keywordSelect">Random keyword</button>
 </div>
 
+<div class="box">
+<div class="questionBox">
+    Question:
 <div id="question">
 </div>
-
-
-<div id="answer">
 </div>
 
-<p class="small">
-<a href="https://github.com/fasiha/randh">Browse source.</a> Also, the first time you use this, there may be a long, tens-of-seconds delay as your browser downloads the 17 MB kanji stroke orders webfont. Sorry.
-</p>
+<div class="answerBox">
+    Answer:
+<div id="answer">
+</div>
+</div>
+</div>
 
+<br clear="all">
+
+<ul>
+<li class="small">There may be a long, several-seconds delay as your browser downloads the 17 MB kanji stroke orders webfont. Sorry.
+
+<li class="small">Buy Heisig's <a href="http://amzn.com/0824835921"><em>Remembering the Kanji</em>, vol. 1</a> and <a href="http://amzn.com/0824831675">vol. 3</a> (out of print) books or <a href="https://itunes.apple.com/us/app/remembering-the-kanji/id424471278?mt=8#">Remembering the Kanji iOS app</a>.
+
+<li class="small"><a href="https://github.com/fasiha/randh">Browse source.</a>
+
+<li class="small">Core jōyō kanji (Heisig's volume 1) is the first 2200 in the list. Heisig's volume 3 extends the list to 3029 by adding another 829 kanji. <button class="smallButton" id="joyoRange">Choose to study volume 1 jōyō kanji</button> or <button class="smallButton" id="fullRange">full list from volumes 1 and 3</button>. (Why no volume 2? <a href="http://amzn.com/0824836693">Volume 2</a> is about pronunciation.)
+
+
+</ul>
 </html>
