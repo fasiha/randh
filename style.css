@@ -1,19 +1,37 @@
-#kanjiSelect, #keywordSelect, #showAnswer {
-	font-size: 200%;
-}
-
+/*
 @font-face {
     font-family: 'Kanji Stroke Order';
     src:
     local('KanjiStrokeOrders'),
     url('KanjiStrokeOrders.ttf');
 }
+*/
+@font-face {
+    font-family: 'Kanji Stroke Order';
+    src: url('webfont/KanjiStrokeOrders_v3.001.eot');
+    src: url('webfont/KanjiStrokeOrders_v3.001.eot?#iefix') format('embedded-opentype'),
+    url('webfont/KanjiStrokeOrders_v3.001.woff') format('woff'),
+    url('webfont/KanjiStrokeOrders_v3.001.ttf') format('truetype'),
+    local('KanjiStrokeOrders');
+    font-weight: normal;
+    font-style: normal;
+}
 
 body {
-    font-family: "mplus-2p-regular", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "Hiragino Mincho Pro","メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    font-family: "mplus-2p-regular", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "Hiragino Mincho Pro","メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 } 
 
-.kanjiStrokeOrder {
-    font-family: Kanji Stroke Order, "mplus-2p-regular", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "Hiragino Mincho Pro","メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+#kanjiSelect, #keywordSelect, #showAnswer{
+	//font-size: 200%;
+	background-color: #ccc;
+	padding: 6px;
+
+}
+
+#question {
+	font-size: 200%;
+}
+.kanjiStrokeOrder, #question.kanjiStrokeOrder {
+    font-family: Kanji Stroke Order, "mplus-2p-regular", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "Hiragino Mincho Pro","メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
     font-size: 128;
 }

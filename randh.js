@@ -1,6 +1,8 @@
 $( document ).ready(function() {
 	kw = kw.split(',');
 
+    var answerTimer = null;
+
 	function getrand(items) {
 		var idx = Math.floor(Math.random() * items.length);
         return {item: items[idx], index: idx};
@@ -9,6 +11,7 @@ $( document ).ready(function() {
     var showAnswer = function(obj) {
     	var answer = $('#answer');
     	answer.css("visibility", "visible");
+    	if (answerTimer != null) {clearTimeout(answerTimer);}
     }
     $('#showAnswer').click(showAnswer);
 
@@ -56,7 +59,8 @@ $( document ).ready(function() {
     	answer.html(randAns);
 
     	var seconds = Number($('#timerSeconds').val());
-    	window.setTimeout(showAnswer, seconds * 1000);
+    	if (answerTimer != null) {clearTimeout(answerTimer);}
+    	answerTimer = setTimeout(showAnswer, seconds * 1000);
     };
     $('#kanjiSelect').click(updateQuestion);
     $('#keywordSelect').click(updateQuestion);
