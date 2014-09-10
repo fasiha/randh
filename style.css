@@ -11,7 +11,7 @@
 
 body {
     font-family: "mplus-2p-regular", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "Hiragino Mincho Pro","メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-} 
+}
 /*
 #kanjiSelect, #keywordSelect, #showAnswer{
 	background-color: #ccc;
@@ -39,13 +39,9 @@ html, body {
     margin-right: 1em;
 }
 
-#question {
-	font-size: 200%;
-}
-
 .kanjiStrokeOrder, #question.kanjiStrokeOrder {
     font-family: Kanji Stroke Order, "mplus-2p-regular", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "Hiragino Mincho Pro","メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-    font-size: 128;
+    font-size: 20em;
 }
 
 .small, .small-head {
