@@ -2,7 +2,7 @@
 
 This humble webapp is a barebones but opinionated quizzing engine for James Heisig's Japanese kanji learning method described in his *Remembering the kanji* (6th edition). 
 
-A live version is available at [http://aldebrn.me/randh/](http://aldebrn.me/randh/).
+A live version is available at [http://fasiha.github.io/randh/](http://fasiha.github.io/randh/).
 
 # Usage
 
